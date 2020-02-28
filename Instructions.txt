@@ -1,0 +1,20 @@
+gs hlt 
+pop esi
+pop edi
+pop ebx
+pop ebp
+ret 
+mov eax,[ebp+0x1c]
+mov [esi],eax
+mov [esi+0x4],edi
+jmp 0x401ffd
+add [eax],al
+jz 0x4390e5
+dec ecx
+dec esi
+dec edi
+mov al,[esi]
+mov [edi],al
+test edi,0xf
+jnz 0x4390d6
+cmp ecx,0x80
